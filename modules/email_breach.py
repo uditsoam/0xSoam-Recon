@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Email Breach Check Module
+#   0xSoamRecon — Email Breach Check Module
 #   Author  : Udit Soam
-#   GitHub  : https://github.com/uditsoam/VoidRecon
+#   GitHub  : https://github.com/uditsoam/0xSoamRecon
 #   Usage   : python3 email_breach.py -u target.com
 #             python3 email_breach.py -u target.com --emails a@b.com,c@d.com
 #             python3 email_breach.py --help
@@ -23,7 +23,7 @@ BANNER = """
  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝  CHECK
 \033[0m
 \033[97m  [ Module 14 ] Email Breach Check — HaveIBeenPwned\033[0m
-\033[93m  Author: Udit Soam | VoidRecon v1.0\033[0m
+\033[93m  Author: Udit Soam | 0xSoamRecon v1.0\033[0m
 \033[91m  WARNING: Use only on authorized targets!\033[0m
 """
 
@@ -40,7 +40,7 @@ def log_data(msg):    print(f"{Fore.MAGENTA}      → {msg}{Style.RESET_ALL}")
 def get_args():
     parser = argparse.ArgumentParser(
         prog="email_breach.py",
-        description="VoidRecon — Email Breach Check via HaveIBeenPwned",
+        description="0xSoamRecon — Email Breach Check via HaveIBeenPwned",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:
@@ -99,7 +99,7 @@ def load_emails_from_osint(output_dir):
 
 def check_email_hibp(email, api_key):
     headers = {
-        "User-Agent"  : "VoidRecon/1.0",
+        "User-Agent"  : "0xSoamRecon/1.0",
         "hibp-api-key": api_key
     }
     url = f"https://haveibeenpwned.com/api/v3/breachedaccount/{email}"
@@ -140,7 +140,7 @@ def check_email_no_key(email):
     try:
         resp = requests.get(
             url,
-            headers = {"User-Agent": "VoidRecon/1.0"},
+            headers = {"User-Agent": "0xSoamRecon/1.0"},
             timeout = 15
         )
         if resp.status_code == 200:

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — JSON Aggregator + Risk Engine
+#   0xSoamRecon — JSON Aggregator + Risk Engine
 #   Author  : Udit Soam
-#   GitHub  : https://github.com/uditsoam/VoidRecon
+#   GitHub  : https://github.com/uditsoam/0xSoamRecon
 # ═══════════════════════════════════════════════════════════
 
 import json, os, sys
@@ -91,12 +91,12 @@ def aggregate(json_dir="output/json", domain="unknown"):
     # ── Build pre-risk merged object ─────────────────────────
     merged = {
         "meta": {
-            "tool"     : "VoidRecon",
+            "tool"     : "0xSoamRecon",
             "version"  : "2.0",
             "author"   : "Udit Soam",
             "domain"   : domain,
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "github"   : "https://github.com/uditsoam/VoidRecon"
+            "github"   : "https://github.com/uditsoam/0xSoamRecon"
         },
         "summary": {
             "total_subdomains"  : total_subdomains,

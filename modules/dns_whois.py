@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — DNS & Whois Module
+#   0xSoamRecon — DNS & Whois Module
 #   Author  : Udit Soam
 #   Usage   : python3 dns_whois.py -u target.com
 #             python3 dns_whois.py -u target.com --records A,MX,TXT
@@ -23,7 +23,7 @@ BANNER = f"""
   ╚═════╝ ╚═╝  ╚═══╝╚══════╝  + WHOIS
 {Style.RESET_ALL}
 {Fore.WHITE}  [ Module 04 ] DNS Records & Whois Intelligence{Style.RESET_ALL}
-{Fore.YELLOW}  Author: Udit Soam | VoidRecon v1.0{Style.RESET_ALL}
+{Fore.YELLOW}  Author: Udit Soam | 0xSoamRecon v1.0{Style.RESET_ALL}
 {Fore.RED}  WARNING: Use only on authorized targets!{Style.RESET_ALL}
 """
 
@@ -37,7 +37,7 @@ def log_data(msg):    print(f"{Fore.BLUE}      → {msg}{Style.RESET_ALL}")
 def get_args():
     parser = argparse.ArgumentParser(
         prog="dns_whois.py",
-        description="VoidRecon — DNS Records & Whois Module",
+        description="0xSoamRecon — DNS Records & Whois Module",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:

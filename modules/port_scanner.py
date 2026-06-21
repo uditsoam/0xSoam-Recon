@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Port Scanner Module
+#   0xSoamRecon — Port Scanner Module
 #   Author  : Udit Soam
 #   Usage   : python3 port_scanner.py -u target.com
 #             python3 port_scanner.py -u target.com --top 100
@@ -24,7 +24,7 @@ BANNER = """
  ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝       ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝
 \033[0m
 \033[97m  [ Module 06 ] Port Scanner — Service & Version Detection\033[0m
-\033[93m  Author: Udit Soam | VoidRecon v1.0\033[0m
+\033[93m  Author: Udit Soam | 0xSoamRecon v1.0\033[0m
 \033[91m  WARNING: Use only on authorized targets!\033[0m
 """
 
@@ -39,7 +39,7 @@ def log_vuln(msg):    print(f"\033[91m      [VULN] {msg}\033[0m")
 def get_args():
     parser = argparse.ArgumentParser(
         prog="port_scanner.py",
-        description="VoidRecon — Port Scanner Module",
+        description="0xSoamRecon — Port Scanner Module",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:

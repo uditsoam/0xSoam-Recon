@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — CVE Auto Lookup Module
+#   0xSoamRecon — CVE Auto Lookup Module
 #   Author  : Udit Soam
-#   GitHub  : https://github.com/uditsoam/VoidRecon
+#   GitHub  : https://github.com/uditsoam/0xSoamRecon
 #   Usage   : python3 cve_lookup.py -u target.com
 #             python3 cve_lookup.py -u target.com --severity CRITICAL
 #             python3 cve_lookup.py --help
@@ -23,7 +23,7 @@ BANNER = """
   ╚═════╝  ╚═══╝  ╚══════╝    ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝
 \033[0m
 \033[97m  [ Module 15 ] CVE Auto Lookup — NVD API v2\033[0m
-\033[93m  Author: Udit Soam | VoidRecon v1.0\033[0m
+\033[93m  Author: Udit Soam | 0xSoamRecon v1.0\033[0m
 \033[91m  WARNING: Use only on authorized targets!\033[0m
 """
 
@@ -84,7 +84,7 @@ SERVICE_KEYWORDS = {
 def get_args():
     parser = argparse.ArgumentParser(
         prog="cve_lookup.py",
-        description="VoidRecon — CVE Auto Lookup via NVD API v2",
+        description="0xSoamRecon — CVE Auto Lookup via NVD API v2",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:
@@ -172,7 +172,7 @@ def extract_keyword(service, version):
 
 
 def search_nvd(keyword, version, api_key, max_cves=5):
-    headers = {"User-Agent": "VoidRecon/1.0"}
+    headers = {"User-Agent": "0xSoamRecon/1.0"}
     if api_key:
         headers["apiKey"] = api_key
 

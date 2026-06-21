@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Web Screenshot Module
+#   0xSoamRecon — Web Screenshot Module
 #   Author  : Udit Soam
 #   Usage   : python3 screenshot.py -u target.com
 #             python3 screenshot.py -u target.com --subdomains subs.txt
@@ -23,7 +23,7 @@ BANNER = f"""
  ╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝  SHOT
 {Style.RESET_ALL}
 {Fore.WHITE}  [ Module 09 ] Web Screenshot Capture{Style.RESET_ALL}
-{Fore.YELLOW}  Author: Udit Soam | VoidRecon v1.0{Style.RESET_ALL}
+{Fore.YELLOW}  Author: Udit Soam | 0xSoamRecon v1.0{Style.RESET_ALL}
 {Fore.RED}  WARNING: Use only on authorized targets!{Style.RESET_ALL}
 """
 
@@ -37,7 +37,7 @@ def log_shot(msg):    print(f"{Fore.GREEN}      [SHOT] {msg}{Style.RESET_ALL}")
 def get_args():
     parser = argparse.ArgumentParser(
         prog="screenshot.py",
-        description="VoidRecon — Web Screenshot Capture Module",
+        description="0xSoamRecon — Web Screenshot Capture Module",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:
@@ -104,7 +104,7 @@ def run_eyewitness(urls, screenshot_dir, threads):
     log_info(f"Running EyeWitness on {len(urls)} URL(s)...")
 
     # Write URLs to temp file
-    url_file = "/tmp/voidrecon_urls.txt"
+    url_file = "/tmp/0xsoamrecon_urls.txt"
     with open(url_file, "w") as f:
         f.write('\n'.join(urls))
 

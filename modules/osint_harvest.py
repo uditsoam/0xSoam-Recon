@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — OSINT Harvesting Module
+#   0xSoamRecon — OSINT Harvesting Module
 #   Author  : Udit Soam
 #   Usage   : python3 osint_harvest.py -u target.com
 #             python3 osint_harvest.py -u target.com -s google,bing
@@ -23,7 +23,7 @@ BANNER = f"""
   ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═══╝   ╚═╝
 {Style.RESET_ALL}
 {Fore.WHITE}  [ Module 02 ] OSINT Harvesting — Emails, Hosts, Names{Style.RESET_ALL}
-{Fore.YELLOW}  Author: Udit Soam | VoidRecon v1.0{Style.RESET_ALL}
+{Fore.YELLOW}  Author: Udit Soam | 0xSoamRecon v1.0{Style.RESET_ALL}
 {Fore.RED}  WARNING: Use only on authorized targets!{Style.RESET_ALL}
 """
 
@@ -37,7 +37,7 @@ def log_data(msg):    print(f"{Fore.MAGENTA}      → {msg}{Style.RESET_ALL}")
 def get_args():
     parser = argparse.ArgumentParser(
         prog="osint_harvest.py",
-        description="VoidRecon — OSINT Harvesting Module",
+        description="0xSoamRecon — OSINT Harvesting Module",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:

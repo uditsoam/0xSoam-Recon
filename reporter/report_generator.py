@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Report Generator
+#   0xSoamRecon — Report Generator
 #   Author  : Udit Soam
 #   Usage   : python3 report_generator.py -j output/json/recon_report.json
 #             python3 report_generator.py -j output/json/recon_report.json --pdf-only
@@ -21,7 +21,7 @@ def log_error(msg):   print(f"{Fore.RED}  [-] {msg}{Style.RESET_ALL}")
 def get_args():
     parser = argparse.ArgumentParser(
         prog="report_generator.py",
-        description="VoidRecon — PDF & HTML Report Generator",
+        description="0xSoamRecon — PDF & HTML Report Generator",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:
@@ -98,7 +98,7 @@ def render_html(data, template_dir):
 def save_html(html_content, output_dir, domain):
     os.makedirs(output_dir, exist_ok=True)
     safe_domain = domain.replace(".", "_").replace("/", "_")
-    filename    = f"VoidRecon_{safe_domain}.html"
+    filename    = f"0xSoamRecon_{safe_domain}.html"
     filepath    = os.path.join(output_dir, filename)
     try:
         with open(filepath, "w", encoding="utf-8") as f:
@@ -113,7 +113,7 @@ def save_html(html_content, output_dir, domain):
 def save_pdf(html_content, output_dir, domain):
     os.makedirs(output_dir, exist_ok=True)
     safe_domain = domain.replace(".", "_").replace("/", "_")
-    filename    = f"VoidRecon_{safe_domain}.pdf"
+    filename    = f"0xSoamRecon_{safe_domain}.pdf"
     filepath    = os.path.join(output_dir, filename)
     log_info(f"Generating PDF (this may take 15-30 seconds)...")
     try:

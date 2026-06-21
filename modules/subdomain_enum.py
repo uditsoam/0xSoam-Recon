@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Subdomain Enumeration Module
+#   0xSoamRecon — Subdomain Enumeration Module
 #   Author  : Udit Soam
 #   Usage   : python3 subdomain_enum.py -u target.com
 #             python3 subdomain_enum.py -u target.com -o /tmp/out
@@ -23,7 +23,7 @@ BANNER = f"""
     ╚═══╝   ╚═════╝ ╚═╝╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝
 {Style.RESET_ALL}
 {Fore.WHITE}  [ Module 01 ] Subdomain Enumeration{Style.RESET_ALL}
-{Fore.YELLOW}  Author: Udit Soam | VoidRecon v1.0{Style.RESET_ALL}
+{Fore.YELLOW}  Author: Udit Soam | 0xSoamRecon v1.0{Style.RESET_ALL}
 {Fore.RED}  WARNING: Use only on authorized targets!{Style.RESET_ALL}
 """
 
@@ -38,7 +38,7 @@ def log_data(msg):    print(f"{Fore.MAGENTA}      {msg}{Style.RESET_ALL}")
 def get_args():
     parser = argparse.ArgumentParser(
         prog="subdomain_enum.py",
-        description=f"VoidRecon — Subdomain Enumeration Module",
+        description=f"0xSoamRecon — Subdomain Enumeration Module",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog=f"""
 Examples:

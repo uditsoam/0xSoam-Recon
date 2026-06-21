@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Shodan Intelligence Module
+#   0xSoamRecon — Shodan Intelligence Module
 #   Author  : Udit Soam
 #   Usage   : python3 shodan_lookup.py -u target.com
 #             python3 shodan_lookup.py -u 192.168.1.1 --ip-mode
@@ -23,7 +23,7 @@ BANNER = f"""
   ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
 {Style.RESET_ALL}
 {Fore.WHITE}  [ Module 03 ] Shodan Intelligence — Exposed Services & CVEs{Style.RESET_ALL}
-{Fore.YELLOW}  Author: Udit Soam | VoidRecon v1.0{Style.RESET_ALL}
+{Fore.YELLOW}  Author: Udit Soam | 0xSoamRecon v1.0{Style.RESET_ALL}
 {Fore.RED}  WARNING: Use only on authorized targets!{Style.RESET_ALL}
 """
 
@@ -38,7 +38,7 @@ def log_data(msg):    print(f"{Fore.BLUE}      → {msg}{Style.RESET_ALL}")
 def get_args():
     parser = argparse.ArgumentParser(
         prog="shodan_lookup.py",
-        description="VoidRecon — Shodan Intelligence Module",
+        description="0xSoamRecon — Shodan Intelligence Module",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:

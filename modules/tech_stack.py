@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Tech Stack Fingerprint Module
+#   0xSoamRecon — Tech Stack Fingerprint Module
 #   Author  : Udit Soam
-#   GitHub  : https://github.com/uditsoam/VoidRecon
+#   GitHub  : https://github.com/uditsoam/0xSoamRecon
 #   Usage   : python3 tech_stack.py -u target.com
 #             python3 tech_stack.py -u target.com --deep
 #             python3 tech_stack.py --help
@@ -24,7 +24,7 @@ BANNER = """
     ╚═╝   ╚══════╝ ╚═════╝╚═╝  ╚═╝   ╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
 \033[0m
 \033[97m  [ Module 10 ] Tech Stack Fingerprinting\033[0m
-\033[93m  Author: Udit Soam | VoidRecon v1.0\033[0m
+\033[93m  Author: Udit Soam | 0xSoamRecon v1.0\033[0m
 \033[91m  WARNING: Use only on authorized targets!\033[0m
 """
 
@@ -99,7 +99,7 @@ JS_LIBRARIES = {
 def get_args():
     parser = argparse.ArgumentParser(
         prog="tech_stack.py",
-        description="VoidRecon — Tech Stack Fingerprinting Module",
+        description="0xSoamRecon — Tech Stack Fingerprinting Module",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:
@@ -170,7 +170,7 @@ def fetch_page(url, timeout=15):
         resp = requests.get(
             url, timeout=timeout,
             verify=False,
-            headers={"User-Agent": "VoidRecon/1.0"},
+            headers={"User-Agent": "0xSoamRecon/1.0"},
             allow_redirects=True
         )
         return resp

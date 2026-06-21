@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Wayback Machine Module
+#   0xSoamRecon — Wayback Machine Module
 #   Author  : Udit Soam
-#   GitHub  : https://github.com/uditsoam/VoidRecon
+#   GitHub  : https://github.com/uditsoam/0xSoamRecon
 #   Usage   : python3 wayback.py -u target.com
 #             python3 wayback.py -u target.com --limit 200
 #             python3 wayback.py --help
@@ -23,7 +23,7 @@ BANNER = """
   ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
 \033[0m
 \033[97m  [ Module 13 ] Wayback Machine — Historical URL Discovery\033[0m
-\033[93m  Author: Udit Soam | VoidRecon v1.0\033[0m
+\033[93m  Author: Udit Soam | 0xSoamRecon v1.0\033[0m
 \033[91m  WARNING: Use only on authorized targets!\033[0m
 """
 
@@ -56,7 +56,7 @@ JUICY_KEYWORDS = [
 def get_args():
     parser = argparse.ArgumentParser(
         prog="wayback.py",
-        description="VoidRecon — Wayback Machine Historical URL Discovery",
+        description="0xSoamRecon — Wayback Machine Historical URL Discovery",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:

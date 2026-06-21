@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Web Crawler Module
+#   0xSoamRecon — Web Crawler Module
 #   Author  : Udit Soam
 #   Usage   : python3 web_crawler.py -u target.com
 #             python3 web_crawler.py -u target.com --tool gobuster
@@ -24,7 +24,7 @@ BANNER = f"""
   ╚══╝╚══╝ ╚══════╝╚═════╝      ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚══════╝
 {Style.RESET_ALL}
 {Fore.WHITE}  [ Module 07 ] Web Crawler — Directory & Endpoint Discovery{Style.RESET_ALL}
-{Fore.YELLOW}  Author: Udit Soam | VoidRecon v1.0{Style.RESET_ALL}
+{Fore.YELLOW}  Author: Udit Soam | 0xSoamRecon v1.0{Style.RESET_ALL}
 {Fore.RED}  WARNING: Use only on authorized targets!{Style.RESET_ALL}
 """
 
@@ -47,7 +47,7 @@ JUICY_PATHS = [
 def get_args():
     parser = argparse.ArgumentParser(
         prog="web_crawler.py",
-        description="VoidRecon — Web Directory & Endpoint Discovery",
+        description="0xSoamRecon — Web Directory & Endpoint Discovery",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:
@@ -160,7 +160,7 @@ def run_ffuf(url, wordlist, threads, extensions, timeout=300):
             "-e", f".{extensions.replace(',', ',.')}",
             "-mc", "200,201,301,302,403,405",
             "-of", "json",
-            "-o", "/tmp/ffuf_voidrecon.json",
+            "-o", "/tmp/ffuf_0xsoamrecon.json",
             "-s"
         ]
         log_info(f"Command: {' '.join(cmd)}")
@@ -170,9 +170,9 @@ def run_ffuf(url, wordlist, threads, extensions, timeout=300):
         )
 
         # Parse ffuf JSON output
-        if os.path.exists("/tmp/ffuf_voidrecon.json"):
+        if os.path.exists("/tmp/ffuf_0xsoamrecon.json"):
             import json as _json
-            with open("/tmp/ffuf_voidrecon.json") as f:
+            with open("/tmp/ffuf_0xsoamrecon.json") as f:
                 ffuf_data = _json.load(f)
             for r in ffuf_data.get("results", []):
                 path  = "/" + r.get("input", {}).get("FUZZ", "")
@@ -189,7 +189,7 @@ def run_ffuf(url, wordlist, threads, extensions, timeout=300):
                     log_juicy(f"{status} → {url}{path}")
                 else:
                     log_found(f"{status} → {url}{path}")
-            os.remove("/tmp/ffuf_voidrecon.json")
+            os.remove("/tmp/ffuf_0xsoamrecon.json")
 
         log_success(f"ffuf → {len(found)} paths found")
         return found

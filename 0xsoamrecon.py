@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Main Orchestrator v2.0
+#   0xSoamRecon — Main Orchestrator v2.0
 #   Author  : Udit Soam
-#   GitHub  : https://github.com/uditsoam/VoidRecon
+#   GitHub  : https://github.com/uditsoam/0xSoamRecon
 # ═══════════════════════════════════════════════════════════
 
 import os, sys, time, json, yaml, argparse
@@ -30,7 +30,7 @@ BANNER = """
    ╚═══╝   ╚═════╝ ╚═╝╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝
 \033[0m
 \033[97m         Automated Red Team Reconnaissance Framework v2.0\033[0m
-\033[93m         Author : Udit Soam  |  github.com/uditsoam/VoidRecon\033[0m
+\033[93m         Author : Udit Soam  |  github.com/uditsoam/0xSoamRecon\033[0m
 \033[91m         WARNING: Use only on authorized targets!\033[0m
 """
 
@@ -111,7 +111,7 @@ def first_time_setup():
     changed = False
 
     print(f"\n\033[93m{'='*62}\033[0m")
-    print(f"\033[93m  VoidRecon — First Time Setup\033[0m")
+    print(f"\033[93m  0xSoamRecon — First Time Setup\033[0m")
     print(f"\033[93m{'='*62}\033[0m")
     print(f"\033[97m  Some modules need API keys to work.\033[0m")
     print(f"\033[97m  Press ENTER to skip any key.\033[0m\n")
@@ -223,7 +223,7 @@ def draw_ui(selected, domain):
 def show_help():
     clear_screen()
     print(f"\n\033[96m{'='*60}\033[0m")
-    print(f"\033[97m  VoidRecon — Help Reference\033[0m")
+    print(f"\033[97m  0xSoamRecon — Help Reference\033[0m")
     print(f"\033[96m{'='*60}\033[0m\n")
     print(f"\033[93m  INTERACTIVE CONTROLS:\033[0m")
     print(f"  \033[97mNumber(s)\033[0m  : Toggle module ON/OFF (e.g: 10 or 10,12,15)")
@@ -231,7 +231,7 @@ def show_help():
     print(f"  \033[96mP\033[0m          : Passive Only (1-5 + report)")
     print(f"  \033[93mQ\033[0m          : Quick scan (1,4,6,8 + report)")
     print(f"  \033[92mENTER\033[0m      : Start scan with selected modules")
-    print(f"  \033[91mEXIT\033[0m       : Quit VoidRecon\n")
+    print(f"  \033[91mEXIT\033[0m       : Quit 0xSoamRecon\n")
     print(f"\033[93m  CLI FLAGS:\033[0m")
     print(f"  \033[96m-u / --url\033[0m        : Target domain or IP")
     print(f"  \033[96m-o / --output\033[0m     : Output directory")
@@ -251,7 +251,7 @@ def show_help():
 def confirm_scan(selected, domain, args):
     clear_screen()
     print(f"\n\033[97m{'='*60}\033[0m")
-    print(f"\033[92m  VoidRecon — Scan Confirmation\033[0m")
+    print(f"\033[92m  0xSoamRecon — Scan Confirmation\033[0m")
     print(f"\033[97m{'='*60}\033[0m\n")
     print(f"  \033[96mTarget    :\033[0m \033[92m{domain}\033[0m")
     print(f"  \033[96mOutput    :\033[0m {args.output}")
@@ -352,7 +352,7 @@ def run_module_safe(name, func):
 def print_final_summary(merged, domain, elapsed_total, selected):
     s = merged.get("summary", {})
     print(f"\n\033[96m{'='*65}\033[0m")
-    print(f"\033[92m  VOIDRECON SCAN COMPLETE\033[0m")
+    print(f"\033[92m  0XSOAMRECON SCAN COMPLETE\033[0m")
     print(f"\033[96m{'='*65}\033[0m\n")
     print(f"  \033[97mTARGET\033[0m          : \033[92m{domain}\033[0m")
     print(f"  \033[97mCOMPLETED\033[0m       : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -388,15 +388,15 @@ def print_final_summary(merged, domain, elapsed_total, selected):
 
 def get_args():
     parser = argparse.ArgumentParser(
-        prog="voidrecon.py",
-        description="VoidRecon — Automated Red Team Reconnaissance Framework v2.0",
+        prog="0xsoamrecon.py",
+        description="0xSoamRecon — Automated Red Team Reconnaissance Framework v2.0",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:
-  python3 voidrecon.py -u target.com
-  python3 voidrecon.py -u target.com --no-interactive
-  python3 voidrecon.py -u target.com --speed T3 --top-ports 500
-  python3 voidrecon.py --history
+  python3 0xsoamrecon.py -u target.com
+  python3 0xsoamrecon.py -u target.com --no-interactive
+  python3 0xsoamrecon.py -u target.com --speed T3 --top-ports 500
+  python3 0xsoamrecon.py --history
         """
     )
     parser.add_argument("-u", "--url",      default=None,  help="Target domain or IP")
@@ -429,8 +429,8 @@ def main():
             first_time_setup()
 
     if not args.url:
-        print(f"\n  \033[96mVoidRecon — Red Team Reconnaissance Framework\033[0m")
-        print(f"  \033[97mgithub.com/uditsoam/VoidRecon\033[0m\n")
+        print(f"\n  \033[96m0xSoamRecon — Red Team Reconnaissance Framework\033[0m")
+        print(f"  \033[97mgithub.com/uditsoam/0xSoamRecon\033[0m\n")
         domain = input(f"  \033[93mEnter target domain or IP: \033[0m").strip()
         if not domain:
             log_error("No target provided — exiting")

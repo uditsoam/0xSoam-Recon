@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Subdomain Takeover Check Module
+#   0xSoamRecon — Subdomain Takeover Check Module
 #   Author  : Udit Soam
-#   GitHub  : https://github.com/uditsoam/VoidRecon
+#   GitHub  : https://github.com/uditsoam/0xSoamRecon
 #   Usage   : python3 takeover_check.py -u target.com
 #             python3 takeover_check.py --help
 # ═══════════════════════════════════════════════════════════
@@ -23,7 +23,7 @@ BANNER = """
     ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝
 \033[0m
 \033[97m  [ Module 11 ] Subdomain Takeover Detection\033[0m
-\033[93m  Author: Udit Soam | VoidRecon v1.0\033[0m
+\033[93m  Author: Udit Soam | 0xSoamRecon v1.0\033[0m
 \033[91m  WARNING: Use only on authorized targets!\033[0m
 """
 
@@ -100,7 +100,7 @@ TAKEOVER_FINGERPRINTS = {
 def get_args():
     parser = argparse.ArgumentParser(
         prog="takeover_check.py",
-        description="VoidRecon — Subdomain Takeover Detection",
+        description="0xSoamRecon — Subdomain Takeover Detection",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:
@@ -202,7 +202,7 @@ def check_takeover(subdomain):
                 timeout=8,
                 verify=False,
                 allow_redirects=True,
-                headers={"User-Agent": "VoidRecon/1.0"}
+                headers={"User-Agent": "0xSoamRecon/1.0"}
             )
             result["status"] = resp.status_code
             body = resp.text.lower()

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Risk Engine
+#   0xSoamRecon — Risk Engine
 #   Author  : Udit Soam
-#   GitHub  : https://github.com/uditsoam/VoidRecon
+#   GitHub  : https://github.com/uditsoam/0xSoamRecon
 # ═══════════════════════════════════════════════════════════
 
 from colorama import Fore, Style, init

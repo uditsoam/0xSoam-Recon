@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — GitHub Dorking Module
+#   0xSoamRecon — GitHub Dorking Module
 #   Author  : Udit Soam
-#   GitHub  : https://github.com/uditsoam/VoidRecon
+#   GitHub  : https://github.com/uditsoam/0xSoamRecon
 #   Usage   : python3 github_dork.py -u target.com
 #             python3 github_dork.py -u target.com --limit 20
 #             python3 github_dork.py --help
@@ -23,7 +23,7 @@ BANNER = """
   ╚═════╝ ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═════╝  DORK
 \033[0m
 \033[97m  [ Module 12 ] GitHub Dorking — Leaked Secrets & Code\033[0m
-\033[93m  Author: Udit Soam | VoidRecon v1.0\033[0m
+\033[93m  Author: Udit Soam | 0xSoamRecon v1.0\033[0m
 \033[91m  WARNING: Use only on authorized targets!\033[0m
 """
 
@@ -52,7 +52,7 @@ DORK_QUERIES = [
 def get_args():
     parser = argparse.ArgumentParser(
         prog="github_dork.py",
-        description="VoidRecon — GitHub Dorking Module",
+        description="0xSoamRecon — GitHub Dorking Module",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:
@@ -96,7 +96,7 @@ def load_token():
 def search_github(query, token, limit=10):
     headers = {
         "Accept"       : "application/vnd.github.v3+json",
-        "User-Agent"   : "VoidRecon/1.0"
+        "User-Agent"   : "0xSoamRecon/1.0"
     }
     if token:
         headers["Authorization"] = f"token {token}"

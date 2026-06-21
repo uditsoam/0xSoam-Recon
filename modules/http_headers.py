@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — HTTP Headers Analyzer Module
+#   0xSoamRecon — HTTP Headers Analyzer Module
 #   Author  : Udit Soam
 #   Usage   : python3 http_headers.py -u target.com
 #             python3 http_headers.py -u target.com --https
@@ -24,7 +24,7 @@ BANNER = f"""
  ╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝   HEADERS
 {Style.RESET_ALL}
 {Fore.WHITE}  [ Module 08 ] HTTP Headers & Security Misconfiguration Analysis{Style.RESET_ALL}
-{Fore.YELLOW}  Author: Udit Soam | VoidRecon v1.0{Style.RESET_ALL}
+{Fore.YELLOW}  Author: Udit Soam | 0xSoamRecon v1.0{Style.RESET_ALL}
 {Fore.RED}  WARNING: Use only on authorized targets!{Style.RESET_ALL}
 """
 
@@ -57,7 +57,7 @@ INFO_LEAK_HEADERS = [
 def get_args():
     parser = argparse.ArgumentParser(
         prog="http_headers.py",
-        description="VoidRecon — HTTP Headers & Security Analysis",
+        description="0xSoamRecon — HTTP Headers & Security Analysis",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:
@@ -111,7 +111,7 @@ def analyze_headers(domain, protocol, port, follow_redirects):
             timeout=15,
             verify=False,
             allow_redirects=follow_redirects,
-            headers={"User-Agent": "VoidRecon/1.0 Security Scanner"}
+            headers={"User-Agent": "0xSoamRecon/1.0 Security Scanner"}
         )
 
         headers      = dict(resp.headers)

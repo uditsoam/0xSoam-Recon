@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # ═══════════════════════════════════════════════════════════
-#   VoidRecon — Google Dork Generator Module
+#   0xSoamRecon — Google Dork Generator Module
 #   Author  : Udit Soam
-#   GitHub  : https://github.com/uditsoam/VoidRecon
+#   GitHub  : https://github.com/uditsoam/0xSoamRecon
 #   Usage   : python3 dork_generator.py -u target.com
 #             python3 dork_generator.py -u target.com --category sensitive
 #             python3 dork_generator.py -u target.com --open
@@ -24,7 +24,7 @@ BANNER = """
  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝  GENERATOR
 \033[0m
 \033[97m  [ Module 16 ] Google Dork Generator\033[0m
-\033[93m  Author: Udit Soam | VoidRecon v1.0\033[0m
+\033[93m  Author: Udit Soam | 0xSoamRecon v1.0\033[0m
 \033[91m  WARNING: Use only on authorized targets!\033[0m
 """
 
@@ -202,7 +202,7 @@ DORK_CATEGORIES = {
 def get_args():
     parser = argparse.ArgumentParser(
         prog="dork_generator.py",
-        description="VoidRecon — Google Dork Generator",
+        description="0xSoamRecon — Google Dork Generator",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 Examples:
@@ -286,9 +286,9 @@ def save_dork_txt(domain, all_dorks_flat, output_dir):
     )
     try:
         with open(txt_path, "w") as f:
-            f.write(f"# VoidRecon — Google Dorks for {domain}\n")
+            f.write(f"# 0xSoamRecon — Google Dorks for {domain}\n")
             f.write(f"# Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-            f.write(f"# Author: Udit Soam | github.com/uditsoam/VoidRecon\n")
+            f.write(f"# Author: Udit Soam | github.com/uditsoam/0xSoamRecon\n")
             f.write(f"# Total dorks: {len(all_dorks_flat)}\n\n")
             for dork in all_dorks_flat:
                 f.write(f"{dork}\n")
